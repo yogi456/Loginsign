@@ -1,10 +1,13 @@
 var express = require('express');
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
+const ejs = require('ejs');
 const app = express();
 require('./model/user');
+require('./model/person')
 
 app.use(express.static('public'));
+app.set("view engine","ejs");
 app.use(require('./routes/auth'))
 mongoose
   .connect(
@@ -27,6 +30,10 @@ mongoose
 
   app.get("/profile",Customemiddleware,function(req,res){
     res.send("User Profile")
+  })
+
+  app.get("/contact",function(req,res){
+    res.render('contactform')
   })
 
  

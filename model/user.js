@@ -12,7 +12,10 @@ const userSchema = new mongoose.Schema(
         password:{
             type:String,
             required:true
-        }
+        },
+        ConfirmToken:String,
+        ExpireToken:Date
     }
 )
+
 mongoose.model("User",userSchema)

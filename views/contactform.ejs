@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <script>
+function validate(){
+  var mobile= document.getElementById('mobile')
+  if(mobile.value.length==10){
+  return true;
+  }else{
+     mobile.focus();
+     alert('Please enter a valid 10 digit phone number.')
+     return false;
+  }
+}
+  </script>
+  <body>
+    <section class="a">
+    <div class="container">
+        <div class="contactinfo">
+          <div >
+            <h2>Contact Info</h2>
+            <ul class="info">
+             <li>
+                <span><a href="https://www.google.com/maps/place/ITE+Bhopal/@23.2287835,77.4351068,17z/data=!4m5!3m4!1s0x397c425d373ffb7b:0x12a0d088f3f4c0e5!8m2!3d23.2288182!4d77.4357528" target="new"><img src="images/location.png" alt="location-img" width="30px" height="30px"></a></span>
+                <span>  ITE, 131/13, 2nd Floor, Zone-II,<br>
+                        M.P.Nagar, Bhopal, India</span>
+              </li>
+              <li>
+                 <span><a href="mailto:sahuhimalayu2@gmail.com"><img src="images/email.png" alt="email-img" width="30px" height="30px"></a></span>
+                 <span>  info@iteindia.in</span>
+              </li>
+              <li>
+                  <span><a href="tel: +91-9111240646"><img src="images/telephone.png" alt="telephone-img" width="30px" height="30px"></a></span>
+                  <span> +91-9111240646<br>
+                         +91-755-4700646</span>
+              </li>
+            </ul>
+            </div>
+            <a id="hello" href="https://www.iteindia.in/" target="new"><img class="img" src="images/ite.png" alt="ite-img" width="140px" height="60px"></a>
+            <ul class="sci">
+              <li ><a href="https://twitter.com/iteindia" target="new"><img src="images/twitter.png" alt="twitter-img" width="30px" height="30px"></a></li>
+              <li><a href="https://www.linkedin.com/in/ite-institute-for-technical-education-bhopal-5951ab113/" target="new"><img src="images/linkedin.png" alt="linkedin-img"width="30px" height="30px"></a></li>
+              <li><a href="https://www.facebook.com/LinuxBhopal/" target="new"><img src="images/facebook.png" alt="facebook-img"width="30px" height="30px"></a></li>
+              <li><a href="https://www.iteindia.in/" target="new"><img src="images/instagram.png" alt="instagram-img"width="30px" height="30px"></a></li>
+              <li><a href="https://www.iteindia.in/" target="new"><img src="images/google-plus.png" alt="google-plus-img"width="30px" height="30px"></a></li>
+            </ul>
+
+        </div> 
+        <form action="/submitmessage" onsubmit="return validate()" method="POST">
+        <div class="contactForm">
+          <h2>Send a Message</h2>
+         <div class="formbox">
+            
+            <div class="inputbox w50">
+               <input type="text" name="firstname" required>
+               <span>First Name</span>
+            </div>
+            <div class="inputbox w50">
+               <input type="text" name="lastname" required>
+               <span>Last Name</span>
+            </div>
+            <div class="inputbox w50">
+               <input type="text" name="email" required>
+               <span>Email Address</span>
+            </div>
+            <div class="inputbox w50">
+               <input type="number" id="mobile" name="mobile" required>
+               <span>Mobile No.</span>
+            </div>
+           <div class="inputbox w100">
+                  <textarea name="message" required></textarea>
+                  <span>Write Your Message here..</span>
+               </div>
+               <div class="inputbox w100">
+                  <a><input type="submit" value="Send"></a>
+               </div>
+               <h4 class="last"> copyright ©2020 ITE. All Rights Reserved.</h4>
+              
+            </div>
+        </div>
+        </form>
+      </div>
+
+    </section>
+  </body>
+</html>
